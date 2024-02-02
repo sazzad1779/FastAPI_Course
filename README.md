@@ -3,9 +3,9 @@
 - **path operation function**  (like def root(): ... above)
 ## Basic
 - **path parameter:** it is used to modify or validate  the path.
-  http://127.0.1:800/item/{id}
+  http://127.0.0.1:800/item/{id}
 - **query parameter:** it's used to modify or validate query path which start following by ? sign.
- http://127.0.1:800/item/{id}?name=sazzad , here name is query parameter
+ http://127.0.0.1:800/item/{id}?name=sazzad , here name is query parameter
 - **Body parameter:** when we need to validate response body we use body parameter. 
 - **Form parameter:** if we need to validate form value we can use form 
 - **File parameter:** To upload file, File parameter is used,
