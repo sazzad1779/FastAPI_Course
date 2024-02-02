@@ -1,6 +1,15 @@
 # FastAPI_Course
 - **path operation decorator** (like @app.get("/"))
 - **path operation function**  (like def root(): ... above)
+## Basic
+-**path parameter:** it is used to modify or validate  the path.
+  http://127.0.1:800/item/{id}
+-**query parameter:** it's used to modify or validate query path which start following by ? sign.
+ http://127.0.1:800/item/{id}?name=sazzad , here name is query parameter
+-**Body parameter:** when we need to validate response body we use body parameter. 
+-**Form parameter:** if we need to validate form value we can use form 
+-**File parameter:** To upload file, File parameter is used,
+files can loaded in bytes (when file size is small) or UploadFile (define a maximum size to load , bigger than that will store in memory)
 ### Path Parameter
 To generate dynamic url we simply put the parameter name in the path around curly braces.then, we define the same parameter as an argument in path operation function.
 such as dynamic url : http://127.0.0.1:5000/user/{id}, here we can dynamically set id value. 
