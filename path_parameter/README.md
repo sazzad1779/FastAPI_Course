@@ -1,5 +1,5 @@
 ## path parameter
-To modify dynamic path we can use path function which used as parameter in path operation function.
+To modify dynamic path we can use **Path** function which used as parameter in **path operation function**.
 ```
 @app.get('/user/{id}')
 async def users(id:int):
