@@ -1,8 +1,3 @@
-
-
-
-
-
 from fastapi import FastAPI, Path , status
 from typing import Annotated 
 app = FastAPI()
@@ -15,9 +10,8 @@ async def users(id:Annotated[int,Path(title="user id",ge=0,le=1000)]): #user id 
 async def users(name:Annotated[str,Path(title="user name",min_length=0,max_length=100)]):
     return {"user name":name}
 
-
-#path parameter should be named as decorator function's dynamic paramer.
-#if use alais then alais name and  decorator function's dynamic paramer must be same.
+#path parameter should be named as decorator function's dynamic parameter.
+#if use alais then alais name and  decorator function's dynamic parameter must be same.
 @app.get('/user_address/{address}',status_code=status.HTTP_200_OK) #user address is string which validated by max_length==3 and min_length==1000
 async def users(addr:Annotated[str,Path(title="user address",min_length=0,max_length=1000 ,alias="address")]):
     return {"Address ":addr}

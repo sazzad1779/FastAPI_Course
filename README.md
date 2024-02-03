@@ -40,12 +40,3 @@ app = FastAPI()
 async def users(id:Annotated[int,Path(...)]):
     return {"user id":id}
 ```
-**path operation**
-- For Numeric:
-  - gt(greater than) , ge(greater than or equal)
-  - lt (less than) , le (less than or equal)
-  - ```async def users(id:Annotated[int,Path(...,ge=1,le=1000)]): ```
-- For string:
-  - min_length, max_length
-  - regex (regular expression)
-  - ```async def users(id:Annotated[str,Path(...,min_length=1,max_length=1000)]): ```
